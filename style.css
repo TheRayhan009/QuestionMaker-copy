@@ -1,0 +1,326 @@
+/* Improved Global Styling */
+body {
+  min-height: 300px;
+  background-color: #f4f4f9;
+  padding: 20px;
+  font-family: 'Bangla', 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+/* Navigation Bar Styling */
+.navbar {
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 100;
+  border-radius: 5px;
+  position: relative; /* Adjusted for proper mobile behavior */
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f4f9;
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 60px; /* Positioned below the navbar */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    transition: max-height 0.3s ease-in-out; /* Smooth toggle animation */
+    max-height: 0; /* Collapsed height */
+    overflow: hidden; /* Hide excess content */
+  }
+
+  .nav-links.show {
+    display: flex;
+    max-height: 300px; /* Expanded height */
+  }
+
+  .nav-links a {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    color: white;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* By default, hide the hamburger icon on larger screens */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+.chapterSelectionArea {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chapterSelectionArea:hover {
+  transform: translateY(-5px);
+}
+
+span {
+  font-weight: 500;
+  color: #555;
+}
+
+.class-dropdown, .subject-dropdown {
+  margin-bottom: 20px;
+  width: 185px;
+  padding: 10px;
+  background-color: #e0e7ff;
+  border: 1px solid #c4d1ff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.class-dropdown:hover, .subject-dropdown:hover {
+  background-color: #c4d1ff;
+  transform: scale(1.05);
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 17px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+#totalMarksInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 160px;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+#totalMarksInput:focus {
+  border-color: #4CAF50;
+}
+
+#chapterCheckboxes {
+  margin-bottom: 15px;
+}
+
+#chapterCheckboxes input {
+  margin-right: 8px;
+}
+
+.question-paper {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+}
+.final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+
+}
+
+.interFinal {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.marks-section {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  text-align: right;
+  min-width: 50px; /* To ensure space for marks */
+}
+
+footer {
+  font-size: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.school, .instruction, #subjectTitle {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 20px;
+}
+
+.timeandmarks {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#questionSection {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+#questionSection:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+  display: none;
+}
+
+.message div {
+  padding: 10px;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 1px solid white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.options {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.options .child {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+#answerSheet {
+  display: none;
+}
+
+input[type="radio"] {
+  margin: 0 5px;
+}
+
+button, input, select {
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  border: 2px solid #4CAF50;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4d1ff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4CAF50;
+}
